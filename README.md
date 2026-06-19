@@ -57,12 +57,12 @@ O **SpotGuard Marketplace** é uma plataforma de marketplace com duas verticais 
                            │ HTTPS / REST API
 ┌──────────────────────────▼──────────────────────────────────┐
 │                   Spring Boot 3.4 (Java 21)                 │
-│  ┌─────────────┐  ┌──────────────┐  ┌───────────────────┐  │
-│  │   Config    │  │     Core     │  │     Modules       │  │
-│  │  Security   │  │   Entities   │  │  space/           │  │
-│  │  JWT Filter │  │   Enums      │  │  infoproduct/     │  │
-│  │  OpenAPI    │  │   Exceptions │  │  payment/         │  │
-│  └─────────────┘  └──────────────┘  └───────────────────┘  │
+│  ┌─────────────┐  ┌──────────────┐  ┌───────────────────┐   │
+│  │   Config    │  │     Core     │  │     Modules       │   │
+│  │  Security   │  │   Entities   │  │  space/           │   │
+│  │  JWT Filter │  │   Enums      │  │  infoproduct/     │   │
+│  │  OpenAPI    │  │   Exceptions │  │  payment/         │   │
+│  └─────────────┘  └──────────────┘  └───────────────────┘   │
 └──────┬──────────────┬───────────────┬───────────────────────┘
        │              │               │
 ┌──────▼──────┐ ┌─────▼──────┐ ┌─────▼──────┐
