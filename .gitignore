@@ -1,0 +1,34 @@
+# =============================================
+# SpotGuard Marketplace - Git Ignore
+# =============================================
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Maven
+target/
+.mvn/
+*.jar
+*.war
+
+# IDE
+.idea/
+.vscode/
+*.iml
+*.ipr
+*.iws
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Documentation (internal)
+project.txt
+tree.txt
+*.pdf
+
+# Logs
+*.log
+logs/

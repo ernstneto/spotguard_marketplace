@@ -1,0 +1,63 @@
+spring:
+  application:
+    name: spotguard-marketplace
+
+  # Configuração de conexão com o banco de dados
+  datasource:
+    url: jdbc:postgresql://localhost:5454/spotguard_marketplace
+    username: admin
+    password: ${DB_PASSWORD:admin}
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      maximum-pool-size: 10
+      minimum-idle: 5
+      idle-timeout: 30000
+      connection-timeout: 20000
+      max-lifetime: 1800000
+
+  # Configuração JPA / Hibernate
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: validate
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: true
+        jdbc:
+          batch_size: 20
+
+  # Configuração de conexão com o motor de cache Redis
+  data:
+    redis:
+      host: localhost
+      port: 6379
+      password: ${REDIS_PASSWORD:redis}
+      timeout: 2000ms
+
+  # Configuração do Message Broker (RabbitMQ)
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: ${RABBITMQ_USER:admin}
+    password: ${RABBITMQ_PASSWORD:admin}
+
+# Configuração personalizada para Token JWT (Segurança da API)
+app:
+  security:
+    jwt:
+      secret-key: ${JWT_SECRET_KEY:3c9c35b5a4b54f248234a2e584c31234567890abcdef1234567890abcdef}
+      expiration-time: 86400000
+
+# Configuração do Servidor
+server:
+  port: 9090
+  error:
+    include-message: always
+    include-binding-errors: always
+
+# Configuração de Logging
+logging:
+  level:
+    com.spotguard.marketplace: DEBUG
+    org.springframework.security: INFO
